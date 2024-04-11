@@ -1,0 +1,17 @@
+<h1>Заказы клиента</h1>
+
+<form method="GET">
+    <label for="date_from">Дата от:</label>
+    <input type="date" id="date_from" name="date_from">
+
+    <label for="date_to">Дата до:</label>
+    <input type="date" id="date_to" name="date_to">
+
+    <input type="submit" value="Отсортировать">
+</form>
+
+<ul>
+{% for order in orders %}
+    <li>{{ order.order_date }}</li>
+{% endfor %}
+</ul>
